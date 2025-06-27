@@ -2,31 +2,31 @@
 
 This project conducts a comprehensive analysis of public opinion in the French-speaking world regarding the high-profile transfer of football superstar Kylian Mbappé to Real Madrid. By scraping and analyzing thousands of YouTube comments before and after the transfer, this study uses Natural Language Processing (NLP) techniques to uncover shifts in public sentiment and identify key discussion topics.
 
-[cite_start]This repository contains all the code, notebooks, and visualizations used for the research paper: *A Study of Public Evaluation in French-speaking Regions on Kylian Mbappé's Transfer to Real Madrid Based on Sentiment Analysis and Topic Modeling*[cite: 1].
+This repository contains all the code, notebooks, and visualizations used for the research paper: *A Study of Public Evaluation in French-speaking Regions on Kylian Mbappé's Transfer to Real Madrid Based on Sentiment Analysis and Topic Modeling*.
 
 ## 📊 Key Findings
 
 Based on the analysis of over 6,000 cleaned French comments, the study reveals:
 
-* **Sentiment Shift**: There was a noticeable shift in public sentiment following the transfer announcement. [cite_start]While comments were predominantly positive when Mbappé was at PSG, the proportion of negative comments increased after the move to Real Madrid[cite: 8]. [cite_start]This reflects a part of the fan base's disappointment with his decision to leave[cite: 8, 15].
-* [cite_start]**Time-based Emotional Fluctuation**: A time-series analysis shows that sentiment towards Mbappé became significantly more negative between October and November post-transfer, which may correlate with a dip in his on-field performance and other negative press at the time[cite: 10].
+* **Sentiment Shift**: There was a noticeable shift in public sentiment following the transfer announcement. While comments were predominantly positive when Mbappé was at PSG, the proportion of negative comments increased after the move to Real Madrid. This reflects a part of the fan base's disappointment with his decision to leave.
+* **Time-based Emotional Fluctuation**: A time-series analysis shows that sentiment towards Mbappé became significantly more negative between October and November post-transfer, which may correlate with a dip in his on-field performance and other negative press at the time.
 * **Core Discussion Topics**: The LDA topic model identified five major themes in the comments:
-    1.  [cite_start]Mbappé's personal qualities and public image (maturity, intelligence)[cite: 12].
-    2.  [cite_start]His achievements and career milestones (champion)[cite: 12].
-    3.  [cite_start]The transfer itself and his future at Real Madrid[cite: 12].
-    4.  [cite_start]Discussions related to PSG, media, and controversies[cite: 12].
-    5.  [cite_start]His football talent, potential, and opportunities[cite: 12].
-* [cite_start]**Impact of Transfer on Topics**: While discussions about Mbappé's talent and achievements remained stable, conversations about his future with Real Madrid and the controversies surrounding the transfer saw a significant increase after the move was confirmed[cite: 14].
+    1.  Mbappé's personal qualities and public image (maturity, intelligence).
+    2.  His achievements and career milestones (champion).
+    3.  The transfer itself and his future at Real Madrid.
+    4.  Discussions related to PSG, media, and controversies.
+    5.  His football talent, potential, and opportunities.
+* **Impact of Transfer on Topics**: While discussions about Mbappé's talent and achievements remained stable, conversations about his future with Real Madrid and the controversies surrounding the transfer saw a significant increase after the move was confirmed.
 
 ## ⚙️ Project Methodology
 
 The project follows a systematic data science workflow:
 
-1.  [cite_start]**Data Collection**: Scraped approximately 11,100 French comments from 10 YouTube videos related to Mbappé's transfer (5 pre-transfer, 5 post-transfer) using a custom Python script[cite: 1].
-2.  **Data Cleaning & Preprocessing**: Implemented a rigorous cleaning process, including deduplication, language filtering (French only), and removing irrelevant comments. [cite_start]The text was preprocessed by converting to lowercase, removing stop-words (using `stopwords-iso`), special characters, and performing lemmatization with NLTK[cite: 1].
-3.  [cite_start]**Sentiment Analysis**: Utilized a pre-trained **CamemBERT** model from Hugging Face, specifically fine-tuned for French sentiment analysis (`ac0hik/Sentiment_Analysis_French`), to classify comments as positive, negative, or neutral[cite: 2, 3].
-4.  [cite_start]**Topic Modeling**: Employed Latent Dirichlet Allocation (LDA) after vectorizing the text with TF-IDF to discover the underlying topics in the public discourse[cite: 1, 12].
-5.  [cite_start]**Data Visualization**: Used `Matplotlib` and `WordCloud` to create insightful visualizations, including sentiment distribution bars, time-series trend lines, and word clouds for positive/negative comments, to effectively present the findings[cite: 1].
+1.  **Data Collection**: Scraped approximately 11,100 French comments from 10 YouTube videos related to Mbappé's transfer (5 pre-transfer, 5 post-transfer) using a custom Python script.
+2.  **Data Cleaning & Preprocessing**: Implemented a rigorous cleaning process, including deduplication, language filtering (French only), and removing irrelevant comments. The text was preprocessed by converting to lowercase, removing stop-words (using `stopwords-iso`), special characters, and performing lemmatization with NLTK.
+3.  **Sentiment Analysis**: Utilized a pre-trained **CamemBERT** model from Hugging Face, specifically fine-tuned for French sentiment analysis (`ac0hik/Sentiment_Analysis_French`), to classify comments as positive, negative, or neutral.
+4.  **Topic Modeling**: Employed Latent Dirichlet Allocation (LDA) after vectorizing the text with TF-IDF to discover the underlying topics in the public discourse.
+5.  **Data Visualization**: Used `Matplotlib` and `WordCloud` to create insightful visualizations, including sentiment distribution bars, time-series trend lines, and word clouds for positive/negative comments, to effectively present the findings.
 
 ## 📁 Repository Structure
 
